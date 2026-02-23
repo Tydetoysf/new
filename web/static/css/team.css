@@ -1,0 +1,422 @@
+/* Team Page Styles */
+
+.team__hero__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 20px 80px 20px;
+    background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.1) 0%, rgba(var(--accent-rgb), 0.05) 100%);
+}
+
+.team__hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.team__hero__content .title {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -1px;
+}
+
+.team__hero__content .description {
+    font-size: 20px;
+    color: var(--gray);
+    font-weight: 400;
+}
+
+.team__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 80px 20px;
+}
+
+.team__content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.team__member {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.team__member:hover {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+.team__member__image {
+    flex-shrink: 0;
+}
+
+.avatar__container.large {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.2) 0%, rgba(var(--accent-rgb), 0.05) 100%);
+}
+
+.avatar__container.large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team__member__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.team__member__header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.team__member__header .name {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.5px;
+}
+
+.team__member__header .role {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 20px;
+    width: fit-content;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.role.owner {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: #000;
+}
+
+.role.developer {
+    background: linear-gradient(135deg, var(--accent) 0%, #00d4ff 100%);
+    color: #000;
+}
+
+.team__member__bio {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.team__member__bio p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--gray);
+    margin: 0;
+}
+
+.team__member__stats {
+    display: flex;
+    gap: 40px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat__item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stat__value {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.stat__label {
+    font-size: 13px;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.team__member__skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill__tag {
+    padding: 8px 16px;
+    background: rgba(var(--accent-rgb), 0.1);
+    border: 1px solid rgba(var(--accent-rgb), 0.3);
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.skill__tag:hover {
+    background: rgba(var(--accent-rgb), 0.2);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.team__member__social {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.social-button img,
+.social-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.social-button.telegram:hover {
+    border-color: #0088cc;
+    background: rgba(0, 136, 204, 0.1);
+}
+
+.social-button.discord:hover {
+    border-color: #5865F2;
+    background: rgba(88, 101, 242, 0.1);
+}
+
+.social-button.github:hover {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.social-button.website:hover {
+    border-color: var(--accent);
+    background: rgba(var(--accent-rgb), 0.1);
+}
+
+.team__divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
+}
+
+.team__values__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 80px 20px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.team__values__content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.team__values__content .title {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--white);
+    text-align: center;
+}
+
+.values__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.value__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.value__item:hover {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(var(--accent-rgb), 0.3);
+    transform: translateY(-5px);
+}
+
+.value__item img {
+    width: 50px;
+    height: 50px;
+    filter: brightness(0) saturate(100%) invert(58%) sepia(89%) saturate(2574%) hue-rotate(180deg) brightness(101%) contrast(101%);
+}
+
+.value__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.value__description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--gray);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .team__member {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
+    .team__member__header .role {
+        margin: 0 auto;
+    }
+
+    .team__member__stats {
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .team__member__skills {
+        justify-content: center;
+    }
+
+    .team__member__social {
+        justify-content: center;
+    }
+
+    .avatar__container.large {
+        width: 150px;
+        height: 150px;
+    }
+
+    .team__hero__content .title {
+        font-size: 36px;
+    }
+
+    .team__member__header .name {
+        font-size: 28px;
+    }
+
+    .values__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .team__hero__container {
+        padding: 100px 15px 60px 15px;
+    }
+
+    .team__hero__content .title {
+        font-size: 28px;
+    }
+
+    .team__hero__content .description {
+        font-size: 16px;
+    }
+
+    .team__container {
+        padding: 40px 15px;
+    }
+
+    .team__content {
+        gap: 40px;
+    }
+
+    .team__member {
+        padding: 20px 15px;
+    }
+
+    .avatar__container.large {
+        width: 120px;
+        height: 120px;
+    }
+
+    .team__member__header .name {
+        font-size: 24px;
+    }
+
+    .team__member__stats {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .stat__item {
+        align-items: center;
+    }
+
+    .social-button {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    .team__values__container {
+        padding: 60px 15px;
+    }
+
+    .team__values__content .title {
+        font-size: 32px;
+    }
+}
+
+/* Add accent color RGB variable if not already defined */
+:root {
+    --accent-rgb: 0, 191, 255;
+}

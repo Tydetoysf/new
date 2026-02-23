@@ -1,0 +1,93 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Flask
+instance/
+.webassets-cache
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Uploads (user generated content)
+web/static/uploads/*
+web/static/sources/*
+!web/static/uploads/.gitkeep
+!web/static/sources/.gitkeep
+
+# Backups
+backups/
+*.bak
+
+# Sensitive config (if using separate config file)
+config_local.py
+secrets.py
+
+# Node modules (if using any frontend build tools)
+node_modules/
+
+# Compiled files
+*.pyc
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# Testing
+.pytest_cache/
+.tox/
+
+# Documentation builds
+docs/_build/
+
+# Temporary files
+*.tmp
+temp/
+tmp/
