@@ -26,6 +26,9 @@ def root():
         seller_ids.append(user.id)
 
     user_id = session.get('user_id')
+    
+    # Get all products for homepage display
+    products = Product.query.filter_by(pin=True).limit(6).all()
 
     reviews = [
         ["+rep one hand menu with nice discount really he is a nice one and every one need to pay from him",
@@ -45,6 +48,7 @@ def root():
     return render_template('index.html', 
                             user_id=user_id, 
                             seller_ids=seller_ids,
+                            products=products,
                             reviews=reviews)
     
 @app.route('/index')

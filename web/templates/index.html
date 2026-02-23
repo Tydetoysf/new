@@ -81,6 +81,48 @@
         </div>
     </div>
 
+    <!-- Featured Products Section -->
+    <div class="products__showcase__container">
+        <div class="products__showcase__content">
+            <span class="title">Featured <span class="gradient-text">Products</span></span>
+            <span class="description">Premium tools built for performance and reliability</span>
+            
+            {% if products and products|length > 0 %}
+            <div class="products__showcase__grid">
+                {% for product in products %}
+                <a href="/product/{{ product.id }}" class="product__showcase__card modern-card">
+                    <div class="product__showcase__header">
+                        {% if product.pin %}
+                        <span class="product__badge modern-badge accent">Featured</span>
+                        {% endif %}
+                        <span class="product__price gradient-text">${{ product.price }}</span>
+                    </div>
+                    <div class="product__showcase__body">
+                        <h3 class="product__name">{{ product.name }}</h3>
+                        <p class="product__category">{{ product.category }}</p>
+                        <p class="product__desc">{{ product.description[:120] }}...</p>
+                    </div>
+                    <div class="product__showcase__footer">
+                        <span class="product__stock">
+                            {% if product.in_stock > 0 %}
+                            <span class="stock__indicator success"></span> {{ product.in_stock }} in stock
+                            {% else %}
+                            <span class="stock__indicator error"></span> Out of stock
+                            {% endif %}
+                        </span>
+                        <button class="product__view__btn modern-button">View Details</button>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="no__products">
+                <p>No products available at the moment. Check back soon!</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
 {% endblock %}
 
 {% block footer %}
