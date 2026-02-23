@@ -7,7 +7,11 @@ from datetime import timedelta
 
 NOWPAYMENTS_BASE_URL = "https://api.nowpayments.io/v1"
 
-app = Flask(__name__)
+# Configure Flask to look for templates in the parent directory
+template_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'templates'))
+static_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'static'))
+
+app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
 
 app.secret_key = os.urandom(24)
 app.config['SOCKETIO_ASYNC_MODE'] = 'threading'
